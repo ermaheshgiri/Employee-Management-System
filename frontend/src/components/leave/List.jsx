@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import API_BASE_URL from '../utils/apiConfig.js';
 import { useAuth } from '../../context/AuthContext.jsx';
 
 const List = () => {
@@ -12,7 +13,7 @@ const List = () => {
   const fetchLeaves = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/leave/${id}/${user.role}`,
+        `${API_BASE_URL}/api/leave/${id}/${user.role}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

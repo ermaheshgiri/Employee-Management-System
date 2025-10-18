@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import API_BASE_URL from '../../utils/apiConfig.js';
 import SummaryCard from "./SummaryCard";
 import {
   FaBuilding,
@@ -17,7 +18,7 @@ const AdminSummary = () => {
   useEffect(() => {
     const fetchSummary = async () => {
       try {
-        const summary = await axios.get('http://localhost:5000/api/dashboard/summary', {
+        const summary = await axios.get(`${API_BASE_URL}/api/dashboard/summary`, {
           headers : {
             "Authorization" : `Bearer ${localStorage.getItem('token')}`
           }

@@ -1,4 +1,5 @@
 import axios from "axios";
+import API_BASE_URL from '../utils/apiConfig.js';
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -13,7 +14,7 @@ const EditDepartment = () => {
       setDepLoading(true);
       try {
         const responnse = await axios.get(
-          `http://localhost:5000/api/department/${id}`,
+          `${API_BASE_URL}/api/department/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -44,7 +45,7 @@ const EditDepartment = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/department/${id}`,
+        `${API_BASE_URL}/api/department/${id}`,
         department,
         {
           headers: {

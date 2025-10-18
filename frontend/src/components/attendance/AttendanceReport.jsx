@@ -1,4 +1,5 @@
 import axios from "axios";
+import API_BASE_URL from '../utils/apiConfig.js';
 import React, { useEffect, useState } from "react";
 
 const AttendanceReport = () => {
@@ -16,7 +17,7 @@ const AttendanceReport = () => {
         query.append("date", dateFilter);
       }
       const responnse = await axios.get(
-        `http://localhost:5000/api/attendance/report?${query.toString()}`,
+        `${API_BASE_URL}/api/attendance/report?${query.toString()}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
