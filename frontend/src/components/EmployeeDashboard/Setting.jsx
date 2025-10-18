@@ -28,7 +28,7 @@ const Setting = () => {
     } else {
       try {
         const response = await axios.put(
-          `${API_BASE_URL}/api/setting/change-password",
+          `${API_BASE_URL}/api/setting/change-password`,
           setting,
           {
             headers: {
