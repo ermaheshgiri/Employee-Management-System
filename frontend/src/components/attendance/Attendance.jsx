@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { columns, AttendanceHelper } from "../../utils/AttendanceHelper";
 import DataTable from "react-data-table-component";
 import axios from "axios";
-import API_BASE_URL from '../utils/apiConfig.js';
+import API_BASE_URL from '../../utils/apiConfig.js';
 
 const Attendance = () => {
   const [attendance, setAttendance] = useState([]);
