@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchDepartments } from "../../utils/EmployeeHelper";
 import axios from "axios";
-import API_BASE_URL from '../utils/apiConfig.js';
+import API_BASE_URL from '../../utils/apiConfig.js';
 import { useNavigate } from "react-router-dom";
 
 const Add = () => {
