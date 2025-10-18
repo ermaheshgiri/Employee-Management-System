@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { columns, EmployeeButtons } from '../../utils/EmployeeHelper'
 import DataTable from 'react-data-table-component'
 import axios from 'axios'
+import API_BASE_URL from '../../utils/apiConfig.js'
 
 const List = () => {
     const [employees, setEmployees] = useState([])
