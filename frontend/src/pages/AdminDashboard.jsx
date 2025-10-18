@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAuth } from '../../context/AuthContext.jsx'
+import { useAuth } from '../context/AuthContext.jsx'
 import AdminSidebar from '../components/dashboard/AdminSidebar'
 import Navbar from '../components/dashboard/Navbar'
 import AdminSummary from '../components/dashboard/AdminSummary'
