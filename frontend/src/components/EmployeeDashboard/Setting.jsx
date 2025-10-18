@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import API_BASE_URL from '../utils/apiConfig.js';
+import API_BASE_URL from '../../utils/apiConfig.js';
 import { useAuth } from '../../context/AuthContext.jsx';
 
 const Setting = () => {
