@@ -1,4 +1,5 @@
 import axios from "axios";
+import API_BASE_URL from './apiConfig.js';
 import { useNavigate } from "react-router-dom";
 
 export const columns = [
@@ -25,7 +26,7 @@ export const DepartmentButtons = ({ Id, onDepartmentDelete }) => {
     if (confirm) {
       try {
         const responnse = await axios.delete(
-          `https://ems6-backend.onrender.com/api/department/${id}`,
+          `${API_BASE_URL}/api/department/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

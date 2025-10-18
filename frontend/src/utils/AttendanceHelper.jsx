@@ -1,5 +1,5 @@
 import axios from "axios";
-import API_BASE_URL from '../utils/apiConfig.js';
+import API_BASE_URL from './apiConfig.js';
 import React from "react";
 
 export const columns = [
