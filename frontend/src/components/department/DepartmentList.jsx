@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import DataTable from "react-data-table-component";
 import { columns, DepartmentButtons } from "../../utils/DepartmentHelper";
 import axios from "axios";
-import API_BASE_URL from '../utils/apiConfig.js';
+import API_BASE_URL from '../../utils/apiConfig.js';
 
 const DepartmentList = () => {
   const [departments, setDepartments] = useState([]);
